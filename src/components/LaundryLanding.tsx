@@ -1,21 +1,36 @@
 
 import React from "react";
+import {
+  WashingMachine,
+  DryCleaning,
+  Truck,
+} from "lucide-react";
 
+// Images from Unsplash: Using chosen images that fit laundry themes.
 const services = [
   {
     title: "Wash & Fold",
     description:
       "Quick and thorough washing and folding for your everyday clothes.",
+    Icon: WashingMachine,
+    imageUrl:
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Dry Cleaning",
     description:
       "Professional dry cleaning for delicate and specialty fabrics.",
+    Icon: DryCleaning,
+    imageUrl:
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Pickup & Delivery",
     description:
       "Convenient pickup and delivery services to save you time.",
+    Icon: Truck,
+    imageUrl:
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -51,6 +66,12 @@ const LaundryLanding = () => {
           Fast, reliable, and convenient laundry and dry cleaning solutions
           near you.
         </p>
+        <img
+          src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=900&q=80"
+          alt="Woman sitting on bed with laundry"
+          className="mx-auto rounded-lg shadow-lg mb-8 max-h-96 object-cover"
+          loading="lazy"
+        />
         <a
           href="#book"
           className="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition"
@@ -61,19 +82,28 @@ const LaundryLanding = () => {
 
       {/* Services Section */}
       <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-10">
-          Our Services
-        </h2>
+        <h2 className="text-3xl font-bold text-center mb-10">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
-          {services.map(({ title, description }, index) => (
+          {services.map(({ title, description, Icon, imageUrl }, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow"
+              className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow flex flex-col"
             >
+              <img
+                src={imageUrl}
+                alt={title}
+                className="rounded-md mb-4 h-40 object-cover"
+                loading="lazy"
+              />
+              <Icon
+                className="mx-auto mb-3 text-blue-600"
+                size={48}
+                strokeWidth={1.5}
+              />
               <h3 className="text-xl font-semibold mb-3 text-blue-600">
                 {title}
               </h3>
-              <p className="text-gray-600">{description}</p>
+              <p className="text-gray-600 flex-grow">{description}</p>
             </div>
           ))}
         </div>
@@ -128,4 +158,3 @@ const LaundryLanding = () => {
 };
 
 export default LaundryLanding;
-
