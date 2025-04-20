@@ -2,7 +2,7 @@
 import React from "react";
 import {
   WashingMachine,
-  DryCleaning,
+  Archive,
   Truck,
 } from "lucide-react";
 
@@ -20,7 +20,7 @@ const services = [
     title: "Dry Cleaning",
     description:
       "Professional dry cleaning for delicate and specialty fabrics.",
-    Icon: DryCleaning,
+    Icon: Archive,
     imageUrl:
       "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80",
   },
@@ -158,3 +158,4 @@ const LaundryLanding = () => {
 };
 
 export default LaundryLanding;
+
