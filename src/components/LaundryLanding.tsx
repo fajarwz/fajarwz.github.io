@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   WashingMachine,
@@ -55,11 +54,11 @@ const testimonials = [
 
 const LaundryLanding = () => {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white text-gray-900 px-6 py-12 max-w-6xl mx-auto">
+    <main className="min-h-screen bg-gradient-to-b from-green-50 to-white text-gray-900 px-6 py-12 max-w-6xl mx-auto">
       {/* Bagian Hero */}
       <section className="text-center max-w-3xl mx-auto mb-16">
         <h1 className="text-5xl font-extrabold mb-4 leading-tight tracking-tight">
-          <span className="text-blue-600">BajuBersih</span>
+          <span className="text-green-600">BajuBersih</span>
           <br />
           Layanan Laundry yang Bersih dan Rapi
         </h1>
@@ -74,7 +73,7 @@ const LaundryLanding = () => {
         />
         <a
           href="#book"
-          className="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition"
+          className="inline-block px-8 py-3 bg-green-600 text-white font-semibold rounded-md shadow-md hover:bg-green-700 transition"
         >
           Pesan Jemputan
         </a>
@@ -96,11 +95,11 @@ const LaundryLanding = () => {
                 loading="lazy"
               />
               <Icon
-                className="mx-auto mb-3 text-blue-600"
+                className="mx-auto mb-3 text-green-600"
                 size={48}
                 strokeWidth={1.5}
               />
-              <h3 className="text-xl font-semibold mb-3 text-blue-600">
+              <h3 className="text-xl font-semibold mb-3 text-green-600">
                 {title}
               </h3>
               <p className="text-gray-600 flex-grow">{description}</p>
@@ -110,8 +109,8 @@ const LaundryLanding = () => {
       </section>
 
       {/* Tentang Kami */}
-      <section className="mb-20 bg-blue-50 rounded-lg p-10 max-w-4xl mx-auto shadow-inner">
-        <h2 className="text-3xl font-bold mb-6 text-center text-blue-700">Tentang Kami</h2>
+      <section className="mb-20 bg-green-50 rounded-lg p-10 max-w-4xl mx-auto shadow-inner">
+        <h2 className="text-3xl font-bold mb-6 text-center text-green-700">Tentang Kami</h2>
         <p className="text-gray-700 leading-relaxed text-center max-w-3xl mx-auto">
           Di BajuBersih, kami berdedikasi memberikan layanan laundry terbaik yang sesuai dengan gaya hidup Anda yang sibuk. Menggunakan produk ramah lingkungan dan perawatan ahli, kami pastikan pakaian Anda kembali bersih, segar, dan terlipat dengan sempurna.
           <br /><br />
@@ -128,10 +127,10 @@ const LaundryLanding = () => {
           {testimonials.map(({ name, feedback }, index) => (
             <blockquote
               key={index}
-              className="bg-white p-6 rounded-md shadow-md border-l-4 border-blue-600 italic text-gray-800"
+              className="bg-white p-6 rounded-md shadow-md border-l-4 border-green-600 italic text-gray-800"
             >
               <p>"{feedback}"</p>
-              <footer className="mt-4 text-right font-semibold text-blue-700">
+              <footer className="mt-4 text-right font-semibold text-green-700">
                 – {name}
               </footer>
             </blockquote>
@@ -140,14 +139,14 @@ const LaundryLanding = () => {
       </section>
 
       {/* Bagian Pemesanan */}
-      <section id="book" className="bg-blue-600 rounded-lg p-10 max-w-3xl mx-auto text-white text-center shadow-lg">
+      <section id="book" className="bg-green-600 rounded-lg p-10 max-w-3xl mx-auto text-white text-center shadow-lg">
         <h2 className="text-3xl font-bold mb-6">Siap untuk memulai?</h2>
         <p className="mb-6 text-lg">
           Jadwalkan jemputan laundry Anda dan rasakan perbedaan layanan dari BajuBersih.
         </p>
         <a
           href="mailto:contact@spotlessspark.com"
-          className="inline-block bg-white text-blue-600 font-semibold px-8 py-3 rounded-md shadow-md hover:bg-gray-100 transition"
+          className="inline-block bg-white text-green-600 font-semibold px-8 py-3 rounded-md shadow-md hover:bg-gray-100 transition"
         >
           Hubungi Kami
         </a>
@@ -157,4 +156,3 @@ const LaundryLanding = () => {
 };
 
 export default LaundryLanding;
-
